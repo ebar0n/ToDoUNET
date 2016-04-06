@@ -14,7 +14,7 @@
         <h2>Hola, @User.Identity.Name</h2>
     </div>
     <div class="mui--text-right">
-        <a href="@Html.Action("Create")" class="mui-btn mui-btn--fab mui-btn--primary">+</a>
+        @Html.ActionLink("+", "Create", new { }, new { @class = "mui-btn mui-btn--fab mui-btn--primary" })
     </div>
     <table class="mui-table">
         <thead>
