@@ -1,14 +1,16 @@
 ﻿@model ToDo.Models.TaskModels
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalle";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
-
+<div class="mui--appbar-height"></div>
+<br>
+<br>
+<div class="mui-container">
 <fieldset>
-    <legend>TaskModels</legend>
+    <legend>Detalle de la tarea</legend>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.Title)
@@ -59,7 +61,9 @@
         @Html.DisplayFor(model => model.UpdatedAt)
     </div>
 </fieldset>
+</div>
+<br />
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
 </p>
