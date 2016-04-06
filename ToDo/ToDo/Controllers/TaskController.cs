@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ToDo.Models;
+using WebMatrix.WebData;
 
 namespace ToDo.Controllers
 {
@@ -15,15 +16,16 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/
-
+        [Authorize]
         public ActionResult Index()
         {
-            return View(db.TaskModels.ToList());
+            int UserId = WebSecurity.GetUserId(User.Identity.Name);
+            return View(db.TaskModels.Where(Task => Task.UserId==UserId).ToList());
         }
 
         //
         // GET: /Task/Details/5
-
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             TaskModels taskmodels = db.TaskModels.Find(id);
@@ -46,8 +48,12 @@ namespace ToDo.Controllers
         // POST: /Task/Create
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(TaskModels taskmodels)
         {
+            taskmodels.UserId = WebSecurity.GetUserId(User.Identity.Name);
+            taskmodels.CreatedAt = DateTime.Now;
+            taskmodels.UpdatedAt = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.TaskModels.Add(taskmodels);
@@ -60,7 +66,7 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             TaskModels taskmodels = db.TaskModels.Find(id);
@@ -79,6 +85,8 @@ namespace ToDo.Controllers
         {
             if (ModelState.IsValid)
             {
+                taskmodels.UpdatedAt = DateTime.Now;
+                taskmodels.UserId = WebSecurity.GetUserId(User.Identity.Name);
                 db.Entry(taskmodels).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -88,7 +96,7 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             TaskModels taskmodels = db.TaskModels.Find(id);
@@ -103,6 +111,7 @@ namespace ToDo.Controllers
         // POST: /Task/Delete/5
 
         [HttpPost, ActionName("Delete")]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             TaskModels taskmodels = db.TaskModels.Find(id);
