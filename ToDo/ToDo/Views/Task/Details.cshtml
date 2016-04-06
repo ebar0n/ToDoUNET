@@ -1,0 +1,72 @@
+﻿@model ToDo.Models.TaskModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TaskModels</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsComplete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsComplete)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Priority)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Priority)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExpirationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpirationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreatedAt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedAt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdatedAt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdatedAt)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
