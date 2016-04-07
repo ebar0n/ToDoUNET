@@ -8,7 +8,7 @@
 <div class="mui--appbar-height"></div>
 <br>
 <br>
-<div class="mui-container">
+<div id="taskForm" class="mui-container">
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
@@ -60,13 +60,13 @@
         @Html.HiddenFor(model => model.CreatedAt)
 
         <p>
-            <input type="submit"  class="mui-btn mui-btn--raised" value="Save" />
+            <input type="submit"  class="mui-btn mui-btn--primary mui-btn--raised" value="Guardar" />
         </p>
     </fieldset>
 }
 </div>
 <br />
-<div>
+<div style="margin-bottom: 20px;">
     @Html.ActionLink("Regresar a la lista", "Index")
 </div>
 

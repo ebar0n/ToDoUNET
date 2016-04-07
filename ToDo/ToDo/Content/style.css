@@ -66,3 +66,68 @@ footer {
   border-top: 1px solid #e0e0e0;
   padding-top: 35px;
 }
+
+#loginForm {
+  margin:auto;
+  width:300px;
+}
+
+.mui-textfield>label{
+  text-align:left;
+}
+
+.validation-summary-errors ul {
+  padding: 0;
+}
+
+.validation-summary-errors ul li,
+.field-validation-error {
+  background-color: #fb4141;
+  color: #fff;
+  list-style:none;
+  text-align:left;
+  padding: 5px 10px;
+  margin: 5px 0;
+  display: block;
+}
+
+#taskForm .mui-textfield>input, #taskForm .mui-textfield>textarea{
+  width: 300px;
+}
+
+#taskForm .editor-label, #taskForm .editor-field {
+  margin: auto;
+  width: 300px;
+}
+
+
+#taskForm .mui-textfield {
+  padding-top: 0;
+  padding-bottom:10px;
+}
+
+#taskForm .editor-label {
+  color: #909090;
+  text-align: left;
+}
+
+#taskForm .mui-textfield>input[type="checkbox"]{
+  width: auto;
+}
+
+.mui-ico{
+  padding: 3px;
+}
+
+.mui-ico:hover{
+  text-decoration:none;
+}
+.display-field {
+  text-align: left;
+}
+.display-label{
+  color: #909090;
+  font-size: 11px;
+  text-align: left;
+  margin-bottom: 10px;
+}

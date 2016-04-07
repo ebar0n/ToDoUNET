@@ -9,6 +9,7 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         @Styles.Render("~/Content/mui-0.4.8/css/mui.min.css")
         @Styles.Render("~/Content/style.css")
+        @Styles.Render("~/Content/icomoon/style.css")
         @Scripts.Render("~/Scripts/mui-0.4.8/js/mui.min.js")
     </head>
     <body>
@@ -19,9 +20,9 @@
                 <td class="mui--text-title">@Html.ActionLink("ToDoUNET", "Index", "Home")</td>
                 <td align="right">
                   <ul class="mui-list--inline mui--text-body2">
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li><i class="icon-eye"></i> @Html.ActionLink("Acerca de", "About", "Home")</li>
                     @if (Request.IsAuthenticated) {
-                        <li>@Html.ActionLink("Tareas", "Index", "Task")</li>
+                        <li><i class="icon-list2"></i> @Html.ActionLink("Tareas", "Index", "Task")</li>
                     }
                     @Html.Partial("_LoginPartial")
                   </ul>

@@ -6,7 +6,7 @@
 <div class="mui--appbar-height"></div>
 <br>
 <br>
-<div class="mui-container">
+<div id="loginForm" class="mui-container">
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
@@ -28,7 +28,7 @@
                     @Html.PasswordFor(m => m.ConfirmPassword)
                 </li>
             </ul>
-            <input type="submit" class="mui-btn mui-btn--raised" value="Registrarse" />
+            <input type="submit" class="mui-btn mui-btn--primary mui-btn--raised" value="Registrarse" />
         </fieldset>
     }
 </div>

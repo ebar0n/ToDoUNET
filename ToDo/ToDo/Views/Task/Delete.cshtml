@@ -8,7 +8,7 @@
 <div class="mui--appbar-height"></div>
 <br>
 <br>
-<div class="mui-container">
+<div id="taskForm" class="mui-container">
 <h3>Esta seguro que desea eliminar la tarea?</h3>
 <fieldset>
     <legend>Detalle de la tarea</legend>
@@ -66,7 +66,7 @@
 <br />
 @using (Html.BeginForm()) {
     <p>
-        <input type="submit" class="mui-btn mui-btn--raised" value="Eliminar" /> |
+        <input type="submit" class="mui-btn mui-btn--danger mui-btn--raised" value="Eliminar" /> |
         @Html.ActionLink("Regresar a la lista", "Index")
     </p>
 }
