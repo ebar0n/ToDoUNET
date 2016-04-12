@@ -7,10 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@ViewBag.Title - UNET</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         @Styles.Render("~/Content/mui-0.4.8/css/mui.min.css")
         @Styles.Render("~/Content/style.css")
         @Styles.Render("~/Content/icomoon/style.css")
+        @Styles.Render("~/Content/bootstrap-material-datetimepicker.css")
         @Scripts.Render("~/Scripts/mui-0.4.8/js/mui.min.js")
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        @Scripts.Render("~/Scripts/moment.js")
     </head>
     <body>
         <header class="mui-appbar mui--z1">
@@ -41,6 +45,7 @@
           </div>
         </footer>
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/Scripts/bootstrap-material-datetimepicker.js")
         @RenderSection("scripts", required: false)
     </body>
 </html>
