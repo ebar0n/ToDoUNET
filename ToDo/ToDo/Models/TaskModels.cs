@@ -26,7 +26,7 @@ namespace ToDo.Models
         [Display(Name = "¿Completada?")]
         public bool IsComplete { get; set; }
         [Display(Name = "Prioridad")]
-        public string Priority { get; set; }
+        public int? Priority { get; set; }
         [Display(Name = "Fecha de expiración")]
         public DateTime? ExpirationDate { get; set; }
         [Display(Name = "Fecha de creación")]

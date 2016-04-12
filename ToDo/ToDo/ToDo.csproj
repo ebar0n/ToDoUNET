@@ -168,6 +168,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604060422152_InitialCreate.cs" />
+    <Compile Include="Migrations\201604060422152_InitialCreate.Designer.cs">
+      <DependentUpon>201604060422152_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604120449275_ChangePriorityFormat.cs" />
+    <Compile Include="Migrations\201604120449275_ChangePriorityFormat.Designer.cs">
+      <DependentUpon>201604120449275_ChangePriorityFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604120508009_ChangePriorityFormat1.cs" />
+    <Compile Include="Migrations\201604120508009_ChangePriorityFormat1.Designer.cs">
+      <DependentUpon>201604120508009_ChangePriorityFormat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\TaskModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +309,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604060422152_InitialCreate.resx">
+      <DependentUpon>201604060422152_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604120449275_ChangePriorityFormat.resx">
+      <DependentUpon>201604120449275_ChangePriorityFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604120508009_ChangePriorityFormat1.resx">
+      <DependentUpon>201604120508009_ChangePriorityFormat1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
